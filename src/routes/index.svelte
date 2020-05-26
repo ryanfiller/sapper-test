@@ -1,9 +1,9 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+<script>
+	import Content from './_content.md'
+	import Button from '../components/button.svelte'
+</script>
 
+<style type='text/scss'>
 	h1 {
 		font-size: 2.8em;
 		text-transform: uppercase;
@@ -11,18 +11,9 @@
 		margin: 0 0 0.5em 0;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
 	p {
 		margin: 1em auto;
+		text-align: left;
 	}
 
 	@media (min-width: 480px) {
@@ -30,17 +21,42 @@
 			font-size: 4em;
 		}
 	}
+
+	.buttons {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		a {
+			flex: 1;
+			max-width: calc(50% - .5rem);
+
+			:global(button) {
+				width: 100%;
+			}
+		}
+	}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>a sapper experiment</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>This an experiment with Svelte & Sapper</h1>
 
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
+<Content />
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<div class="buttons">
+	<a href="/goals">
+		<Button>
+			See the Goals
+		</Button>
+	</a>
+
+	<a href="https://github.com/ryanfiller/sapper-test">
+		<Button>
+			See the Code
+		</Button>
+	</a>
+</div>
+

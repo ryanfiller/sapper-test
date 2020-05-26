@@ -4,6 +4,7 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
 	color: #333;
+	scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +21,10 @@ a {
 	color: inherit;
 }
 
+p {
+	width: 100%;
+}
+
 code {
 	font-family: menlo, inconsolata, monospace;
 	font-size: calc(1em - 2px);
@@ -27,6 +32,25 @@ code {
 	background-color: #f0f0f0;
 	padding: 0.2em 0.4em;
 	border-radius: 2px;
+}
+
+pre {
+	color: #555;
+	background-color: #f0f0f0;
+}
+
+pre code {
+	padding: 0;
+}
+
+#sapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#sapper main {
+	flex: 1;
 }
 
 @media (min-width: 400px) {
