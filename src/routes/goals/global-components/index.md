@@ -7,9 +7,9 @@ emoji: ✅
 
 # I want the ability to wrap my site in a header and footer that do not re-render between pages so I can do cool animations.
 
-The best part of using a JavaScript framework is leaving traditional hard page loads behind. The lets page partially render some elements while persisting others on the screen. This can be used for many things, including transition animations, but only if the framework allows for some components to not be reloaded during url changes.
+The best part of using a JavaScript framework is leaving traditional hard page loads behind. This lets pages partially render some elements while persisting others on the screen. This can be used for many things, including transition animations, but only if the framework allows for some components to not be reloaded during url changes.
 
-By default, Sapper provides a [`<Layout>` component](https://sapper.svelte.dev/docs#Layouts) that will wrap each page and all whatever components exist outside of the page `<slot>` to keep existing as pages are created and destroyed based on route changes.
+By default, Sapper provides a [`<Layout>` component](https://sapper.svelte.dev/docs#Layouts) that will wrap each page and all components existing outside of the page `<slot>` to keep existing as pages are created and destroyed based on route changes.
 
 Each page is also provided with a `segment` prop so that logic and styling can be applied based on the current page.
 
