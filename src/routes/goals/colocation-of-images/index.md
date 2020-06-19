@@ -1,7 +1,7 @@
 ---
 title: Colocation of Images & Components
 date: 2020-05-04
-order: 40
+order: 50
 emoji: ✅
 ---
 
